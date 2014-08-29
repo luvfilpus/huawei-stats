@@ -1,0 +1,26 @@
+#
+#                    (c)opyleft 2007 by 00ZIE <oozie@poczta.fm>
+#
+#         All programs and config files in this package are considered
+#             free software; you can redistribute it and/or modify
+#      it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; either version 3 of the License, or
+#       any later version. If you do modify the files in this package,
+#            plese leave the information about the author unchanged.
+#                       !!! FOR NON-COMMERCIAL USE ONLY !!!
+#
+
+CC	=	gcc
+LIBS	=	ncurses
+FILES	=	init_ncurses.c main.c flowreport.c rssi.c modechange.c
+OPTS	=	-Wall
+
+all: 
+	$(CC) $(OPTS) -l$(LIBS) $(FILES) -o he220stat
+clean: 
+	rm -fr he220stat Makefile config.status config.log
+install:
+	chmod +x ./xhe220stat
+	cp *he220stat /usr/local/bin
+uninstall:
+	rm -fr /usr/local/bin/he220stat /usr/local/bin/xhe220stat

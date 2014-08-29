@@ -1,0 +1,8 @@
+#!/bin/bash
+XTERMOPTS="-title Huawei-E220-stats -bg black -fg green -geometry 34x9" 
+
+if [ -e /usr/local/bin/he220stat ]; then
+	xterm $XTERMOPTS -e /usr/local/bin/he220stat
+else
+	xterm $XTERMOPTS -e ./he220stat
+fi

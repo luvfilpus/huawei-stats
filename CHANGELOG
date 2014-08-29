@@ -1,0 +1,9 @@
+he220stat - 0x03
+	* ncurses.h presence is checked by ./configure script
+	
+he220stat - 0x02
+	07-06-2007
+	* Improved algorithm for parsing serial output
+	  (thanks tmck)
+	* ncrs = 0 gives you raw output without segfault
+	
